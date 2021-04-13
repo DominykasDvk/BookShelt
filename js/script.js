@@ -1,3 +1,4 @@
+let preventClick = 0;
 
 class Book {
     constructor(title, author, total, read, rating, id) {
@@ -185,7 +186,7 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // prideti arba redaguoti knygas jei visi langeliai turi reikšmes, su salyga jei langeliuose 'total pages' ir 'pages read'  yra skaiciai.
 
-document.addEventListener('submit', function (e) {
+document.querySelector('form').addEventListener('submit', function (e, editMode=false) {
     e.preventDefault();
     if (preventClick == 1) return;
     const title = document.querySelector("#title").value;
