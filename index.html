@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Styles.css">
+    <script src="https://kit.fontawesome.com/0e43bb6e60.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Knygu_lentyna</title>
+</head>
+<body>
+        <h1><span class="fs">BOOK</span><span class="sf">LIST</span></h1>
+
+        <form id="bookForm" name="bookForm"></form>
+        <div>
+            <p for="title">Title:</p>
+            <input type="text" name="title" id="title">
+        </div>
+        <div>
+            <p for="author">Author:</p>
+            <input type="text" name="author" id="author">
+        </div>
+        <div>
+            <p for="total">Total pages:</p>
+            <input type="text" name="total" id="total">
+        </div>
+        <div>
+            <p for="read">Pages already read:</p>
+            <input type="text" name="read" id="read">
+        </div>
+
+        <div>
+            <p id="rating">Rating:</p>
+            <div class="stars">
+                <input type="radio" name="rate" id="rate-5">
+                <label for="rate-5" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-4">
+                <label for="rate-4" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-3">
+                <label for="rate-3" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-2">
+                <label for="rate-2" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-1">
+                <label for="rate-1" class="fas fa-star"></label>
+            </div>
+        </div> 
+
+        <div>
+            <input type="button" value="Submit" id="submit" class="btnSub">
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages left</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="bookList">
+            
+        </tbody>
+    </table>
+</div>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
