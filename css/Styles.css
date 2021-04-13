@@ -81,4 +81,7 @@ input[type=text]{
     padding: 8px;
     border-bottom: 1px solid #ddd;
 }
-  
+.container{
+    margin: 12px 20px;
+    padding: 12px 8px;
+}

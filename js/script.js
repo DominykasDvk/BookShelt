@@ -1,3 +1,4 @@
+let preventClick = 0;
 
 class Book {
     constructor(title, author, total, read, rating, id) {
@@ -94,7 +95,7 @@ class UI {
         <a href="#" class="btn btn-sm delete fa fa-trash"></a>
         </td>
         <td>
-        <a href="#booForm" class="btnSub"></a>
+        <a href="#bookForm" class="btn btn-sm edit fa fa-edit"></a>
         </td>
         `;
 
@@ -112,7 +113,7 @@ class UI {
         <a href="#" class="btn btn-sm delete fa fa-trash"></a>
         </td>
         <td>
-        <a href="#booForm" class="btnSub"></a>
+        <a href="#bookForm" class="btn btn-sm edit fa fa-edit"></a>
         </td>
         `;
     }
@@ -185,7 +186,7 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // prideti arba redaguoti knygas jei visi langeliai turi reikšmes, su salyga jei langeliuose 'total pages' ir 'pages read'  yra skaiciai.
 
-document.addEventListener('submit', function (e) {
+document.querySelector('form').addEventListener('submit', function (e, editMode=false) {
     e.preventDefault();
     if (preventClick == 1) return;
     const title = document.querySelector("#title").value;
